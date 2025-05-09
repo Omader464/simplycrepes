@@ -3,3 +3,4 @@ prophet
 pandas
 plotly
 openpyxl
+joblib
