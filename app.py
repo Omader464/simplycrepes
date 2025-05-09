@@ -3,9 +3,18 @@ import numpy as np
 import joblib
 import os
 
+# Fallback model loader
+def safe_load_model(file_name):
+    try:
+        return joblib.load(file_name)
+    except Exception as e:
+        st.warning(f"⚠️ Failed to load model {file_name}: {e}")
+        return None
+
 # Load trained models
-morning_model = joblib.load("morning_rf_model.pkl")
-evening_model = joblib.load("evening_rf_model.pkl")
+morning_model = safe_load_model("morning_rf_model.pkl")
+evening_model = safe_load_model("evening_rf_model.pkl")
+
 
 # App title
 st.title("🔵 Net Sales Predictor")
