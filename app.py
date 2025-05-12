@@ -42,7 +42,7 @@ if st.button("Predict Net Sales"):
 # ---------------------------------------------
 # Optional: Upload new Excel to retrain model
 # ---------------------------------------------
-st.subheader(" Upload New Training Data (Optional)")
+st.subheader(" Upload New Forecasting Data (Optional)")
 
 uploaded_file = st.file_uploader("Upload an Excel file to update forecasts", type=["xlsx"])
 
