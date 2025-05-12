@@ -44,7 +44,7 @@ if st.button("Predict Net Sales"):
 # ---------------------------------------------
 st.subheader(" Upload New Training Data (Optional)")
 
-uploaded_file = st.file_uploader("Upload an Excel file to retrain the model", type=["xlsx"])
+uploaded_file = st.file_uploader("Upload an Excel file to update forecasts", type=["xlsx"])
 
 def retrain_model_from_excel(file):
     import pandas as pd
